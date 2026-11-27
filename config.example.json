@@ -1,0 +1,11 @@
+{
+  "_note": "脱敏示例：所有真实值以 <占位符> 待填。真实 key 一律放 api_key_env 指向的环境变量，不在本文件出现。",
+  "pool_order": ["ark", "doubao", "sensenova", "qwen", "agnes"],
+  "providers": [
+    {"name": "ark", "endpoint": "https://<endpoint>/images/generations",
+     "model": "<model-id>", "api_key_env": "<ENV_VAR_NAME>", "free_quota": 0,
+     "timeout": 60, "description": "占位：请填真实 endpoint/model/环境变量名",
+     "size_map": {"portrait": "2K", "landscape": "2K", "square": "2K"},
+     "format": "openai", "output_format": "jpeg"}
+  ]
+}

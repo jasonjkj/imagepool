@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "imagepool"
+version = "0.4.6"
+description = "Text-gen independent image generation provider pool (migrated, zero-dep)"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+mcp = ["mcp>=1.0,<2"]
+dev = ["pytest>=7"]
+scenic = ["pyyaml"]
+
+[project.scripts]
+imagepool = "imagepool.__main__:main"
+imagepool-mcp = "mcp_server:main"
+
+[tool.setuptools]
+py-modules = ["mcp_server"]
+
+[tool.setuptools.packages.find]
+include = ["imagepool*"]
+
+[tool.setuptools.package-data]
+"imagepool" = ["data/*.json"]
